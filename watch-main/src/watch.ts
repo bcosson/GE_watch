@@ -54,15 +54,16 @@ class Watch {
       console.log(">>You can now edit hours...");
     }
   }
+
   on_light_click(): void {
     this.night_mode = !this.night_mode;
   }
 
   increment_time(): void {
     if (this.mode_clicked_once && this.mode_clicked_twice) {
-      this.increment_hours();
-    } else if (this.mode_clicked_once && this.mode_clicked_twice == false) {
       this.increment_minutes();
+    } else if (this.mode_clicked_once && this.mode_clicked_twice == false) {
+      this.increment_hours();
     } else {
       console.log(">>Plese enter edit mode first");
     }
