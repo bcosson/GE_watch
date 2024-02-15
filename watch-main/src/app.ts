@@ -9,6 +9,10 @@ console.log("Time is", watch.get_time());
 
 app.use(express.static("public"));
 
+app.get("/client.js", (req, res) => {
+  res.sendFile(__dirname + "/client.js");
+});
+
 app.get("/time", (req, res) => {
   res.send(watch.get_time());
 });
