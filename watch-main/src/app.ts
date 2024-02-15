@@ -3,14 +3,15 @@ import { Watch } from "./watch.js";
 
 const app = express();
 const port = 3000;
+const __dirname = process.env.PWD;
 
 const watch = new Watch();
 console.log("Time is", watch.get_time());
 
 app.use(express.static("public"));
 
-app.get("/client.js", (req, res) => {
-  res.sendFile(__dirname + "/client.js");
+app.get("/client_file", (req, res) => {
+  res.sendFile(__dirname + "/dist/src/client.js");
 });
 
 app.get("/time", (req, res) => {
