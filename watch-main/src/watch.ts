@@ -79,7 +79,7 @@ export class Watch {
   }
 
   increment_minutes(): void {
-    if (this.minutes < 23) {
+    if (this.minutes < 59) {
       this.minutes++;
     } else {
       this.minutes = 0;

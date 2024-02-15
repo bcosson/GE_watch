@@ -30,7 +30,7 @@ app.get("/increaseTime", (req, res) => {
 
 app.get("/toggleLight", (req, res) => {
   watch.on_light_click();
-  res.send();
+  res.send(watch.get_night_mode());
 });
 
 app.listen(port, () => {

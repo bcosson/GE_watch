@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => response.text())
       .then((time) => {
         timeDiv.innerHTML = time;
-        console.log(time);
       });
   }
 
@@ -24,7 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function toggleLight() {
-    fetch("/toggleLight");
+    fetch("/toggleLight")
+      .then((response) => response.text())
+      .then((night_mode_on) => {
+        if (night_mode_on === "true") {
+          timeDiv.style.color = "red";
+        } else {
+          timeDiv.style.color = "black";
+        }
+      });
   }
 
   modeButton.addEventListener("click", toggleMode);
