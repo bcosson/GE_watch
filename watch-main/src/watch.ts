@@ -1,4 +1,4 @@
-class Watch {
+export class Watch {
   private hours: number;
   private minutes: number;
   private mode_clicked_once: boolean;
@@ -24,6 +24,7 @@ class Watch {
     }
     return this.hours.toString();
   }
+
   get_minutes(): string {
     if (this.minutes < 10) {
       return "0" + this.minutes.toString();
@@ -68,6 +69,7 @@ class Watch {
       console.log(">>Plese enter edit mode first");
     }
   }
+
   increment_hours(): void {
     if (this.hours < 23) {
       this.hours++;
@@ -75,6 +77,7 @@ class Watch {
       this.hours = 0;
     }
   }
+
   increment_minutes(): void {
     if (this.minutes < 23) {
       this.minutes++;
