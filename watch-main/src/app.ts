@@ -1,5 +1,5 @@
 import express from "express";
-import { Watch } from "./watch";
+import { Watch } from "./watch.js";
 
 const app = express();
 const port = 3000;

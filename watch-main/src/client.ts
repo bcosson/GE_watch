@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => response.text())
       .then((time) => {
         timeDiv.textContent = time;
+        console.log(time);
       });
   }
 
