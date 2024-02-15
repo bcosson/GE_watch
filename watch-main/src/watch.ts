@@ -83,6 +83,7 @@ export class Watch {
       this.minutes++;
     } else {
       this.minutes = 0;
+      this.increment_hours();
     }
   }
 }
