@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("/time")
       .then((response) => response.text())
       .then((time) => {
-        timeDiv.textContent = time;
+        timeDiv.innerHTML = time;
         console.log(time);
       });
   }
